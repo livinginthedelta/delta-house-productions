@@ -1,19 +1,25 @@
-# Delta House Productions Website
+# Delta House Productions — Version 2
 
-This package contains a complete one-page website for Delta House Productions.
+This website is ready for GitHub Pages.
 
-## Uploading to GitHub Pages
-1. Create or open the GitHub repository for the company.
-2. Upload `index.html` to the main/root folder.
+## Upload instructions
+
+1. Open the `delta-house-productions` GitHub repository.
+2. Replace the current `index.html` with the Version 2 `index.html`.
 3. Commit the change.
-4. Open repository Settings > Pages.
-5. Set the source to your main branch and root folder.
-6. Save and open the published website link.
+4. Wait about 1–3 minutes, then refresh the live website.
 
-## Before publishing
-Open `index.html` in a text editor and replace:
-- `hello@deltahouseproductions.com` with the official business email.
-- Placeholder projects and statuses with actual productions.
-- Any wording you would like changed.
+## Important links already connected
 
-The page is mobile responsive and does not require any external files.
+- Living in the Delta:
+  https://lifeinthedelta.github.io/life-in-the-delta/#top
+
+- Herrin Enterprises:
+  https://lifeinthedelta.github.io/herrin-enterprises/
+
+- Living in the Delta YouTube:
+  https://www.youtube.com/@LivingintheDelta
+
+## Contact email
+
+deltahouseproductions@outlook.com
