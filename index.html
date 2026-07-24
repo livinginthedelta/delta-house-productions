@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Delta House Productions creates documentaries, web series, commercials, photography, and original media in the Mississippi Delta." />
   <meta name="theme-color" content="#070707" />
-  <title>Delta House Productions | Stories Worth Telling</title>
+  <title>Delta House Productions</title>
 
   <style>
     :root{
       --black:#070707;
       --panel:#111;
-      --panel2:#171717;
       --cream:#f3ede3;
       --muted:#b9b0a5;
       --gold:#c99b48;
@@ -19,143 +18,69 @@
       --line:rgba(255,255,255,.11);
       --max:1180px;
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;background:var(--black)}
     body{
-      margin:0;
-      color:var(--cream);
-      background:
-        radial-gradient(circle at 78% 8%,rgba(201,155,72,.13),transparent 28rem),
-        var(--black);
-      font-family:Arial,Helvetica,sans-serif;
-      line-height:1.6;
-      overflow-x:hidden;
+      margin:0;color:var(--cream);
+      background:radial-gradient(circle at 78% 8%,rgba(201,155,72,.13),transparent 28rem),var(--black);
+      font-family:Arial,Helvetica,sans-serif;line-height:1.6;overflow-x:hidden
     }
-
     a{color:inherit;text-decoration:none}
+    button{font:inherit}
     .container{width:min(calc(100% - 2.2rem),var(--max));margin:auto}
-    .eyebrow{
-      margin:0 0 .8rem;
-      color:var(--gold2);
-      font-size:.72rem;
-      font-weight:800;
-      letter-spacing:.2em;
-      text-transform:uppercase;
-    }
-
-    h1,h2,h3{
-      margin-top:0;
-      font-family:Georgia,"Times New Roman",serif;
-      line-height:1.05;
-      letter-spacing:-.025em;
-    }
-
+    .eyebrow{margin:0 0 .8rem;color:var(--gold2);font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+    h1,h2,h3{margin-top:0;font-family:Georgia,"Times New Roman",serif;line-height:1.05;letter-spacing:-.025em}
     h2{font-size:clamp(2.4rem,5vw,5rem)}
     p{color:var(--muted)}
-
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      padding:.85rem 1.2rem;
-      border:1px solid var(--gold);
-      border-radius:999px;
-      font-size:.74rem;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      transition:.22s ease;
+      display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.85rem 1.2rem;
+      border:1px solid var(--gold);border-radius:999px;font-size:.74rem;font-weight:800;
+      letter-spacing:.08em;text-transform:uppercase;transition:.22s ease;cursor:pointer
     }
-
     .btn-primary{background:var(--gold);color:#080808}
-    .btn-secondary{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.03)}
-    .btn:hover,.btn:focus-visible{
-      transform:translateY(-2px);
-      background:var(--gold2);
-      color:#080808;
-      border-color:var(--gold2);
-      outline:none;
-    }
-
-    header{
-      position:fixed;
-      inset:0 0 auto;
-      z-index:100;
-      background:rgba(7,7,7,.9);
-      border-bottom:1px solid var(--line);
-      backdrop-filter:blur(15px);
-    }
-
-    nav{
-      min-height:82px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-    }
-
+    .btn-secondary{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.03);color:var(--cream)}
+    .btn:hover,.btn:focus-visible{transform:translateY(-2px);background:var(--gold2);color:#080808;border-color:var(--gold2);outline:none}
+    header{position:fixed;inset:0 0 auto;z-index:100;background:rgba(7,7,7,.9);border-bottom:1px solid var(--line);backdrop-filter:blur(15px)}
+    nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
     .brand{display:flex;align-items:center;gap:.8rem}
-    .brand-mark{
-      width:42px;height:42px;display:grid;place-items:center;
-      border:1px solid var(--gold);transform:rotate(45deg)
-    }
+    .brand-mark{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--gold);transform:rotate(45deg)}
     .brand-mark span{transform:rotate(-45deg);color:var(--gold2);font-family:Georgia,serif}
     .brand-copy{display:grid;line-height:1}
     .brand-copy strong{font-family:Georgia,serif;letter-spacing:.1em}
     .brand-copy span{margin-top:.32rem;color:var(--gold);font-size:.53rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
-
     .nav-links{display:flex;align-items:center;gap:1.15rem;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
     .nav-links>a:not(.btn):hover{color:var(--gold2)}
     .menu-btn{display:none;border:0;background:transparent;color:var(--cream);font-size:1.5rem;cursor:pointer}
-
     .hero{
-      min-height:100svh;
-      display:grid;
-      align-items:end;
-      background:
-        linear-gradient(to top,#070707 2%,rgba(7,7,7,.28) 58%,rgba(7,7,7,.82)),
-        radial-gradient(circle at 75% 35%,rgba(201,155,72,.25),transparent 28rem),
-        linear-gradient(135deg,#090909,#211b14 52%,#080808);
+      min-height:100svh;display:grid;align-items:end;
+      background:linear-gradient(to top,#070707 2%,rgba(7,7,7,.28) 58%,rgba(7,7,7,.82)),
+      radial-gradient(circle at 75% 35%,rgba(201,155,72,.25),transparent 28rem),
+      linear-gradient(135deg,#090909,#211b14 52%,#080808)
     }
-
     .hero-content{padding:10rem 0 5rem}
-    .status{
-      display:inline-flex;
-      margin-bottom:1rem;
-      padding:.4rem .7rem;
-      border:1px solid rgba(129,202,146,.32);
-      border-radius:999px;
-      color:#b8ebc3;
-      background:rgba(129,202,146,.08);
-      font-size:.63rem;
-      font-weight:800;
-      letter-spacing:.13em;
-      text-transform:uppercase;
-    }
-
+    .status{display:inline-flex;margin-bottom:1rem;padding:.4rem .7rem;border:1px solid rgba(129,202,146,.32);border-radius:999px;color:#b8ebc3;background:rgba(129,202,146,.08);font-size:.63rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
     .hero h1{max-width:980px;margin-bottom:1.2rem;font-size:clamp(3.6rem,9vw,8.4rem);font-weight:500}
     .hero h1 span{color:transparent;-webkit-text-stroke:1px rgba(244,238,228,.55)}
     .hero-copy{max-width:720px;font-size:clamp(1rem,2vw,1.2rem)}
     .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
-
     section{padding:6.5rem 0}
     .section-head{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2rem}
     .section-head p:last-child{max-width:460px}
 
-    .feature{background:#0d0d0d;border-block:1px solid var(--line)}
-    .feature-card{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      min-height:520px;
-      border:1px solid var(--line);
-      background:
-        linear-gradient(to top,rgba(0,0,0,.96),rgba(0,0,0,.08)),
-        radial-gradient(circle at 25% 22%,rgba(83,105,68,.3),transparent 34%),
-        linear-gradient(135deg,#172017,#080908 72%);
+    .audio-section{padding:0 0 6.5rem;background:#0d0d0d}
+    .audio-card{
+      display:grid;grid-template-columns:1fr auto;align-items:center;gap:2rem;padding:2rem;
+      border:1px solid rgba(201,155,72,.35);
+      background:linear-gradient(135deg,rgba(201,155,72,.12),rgba(255,255,255,.025));
+      box-shadow:0 22px 70px rgba(0,0,0,.25)
     }
-
+    .audio-card h2{font-size:clamp(2rem,4vw,3.6rem);margin-bottom:.6rem}
+    .audio-card p{max-width:680px;margin-bottom:0}
+    .audio-controls{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;justify-content:flex-end}
+    .audio-time{min-width:84px;color:var(--muted);font-size:.75rem;font-weight:700;letter-spacing:.05em}
+    .audio-progress{width:180px;accent-color:var(--gold)}
+    .feature{background:#0d0d0d;border-block:1px solid var(--line)}
+    .feature-card{display:grid;grid-template-columns:1.2fr .8fr;min-height:520px;border:1px solid var(--line);background:linear-gradient(to top,rgba(0,0,0,.96),rgba(0,0,0,.08)),radial-gradient(circle at 25% 22%,rgba(83,105,68,.3),transparent 34%),linear-gradient(135deg,#172017,#080908 72%)}
     .feature-copy{align-self:end;padding:clamp(1.5rem,5vw,3.7rem)}
     .feature-copy h3{font-size:clamp(2.8rem,6vw,6rem);margin-bottom:.7rem}
     .feature-meta{display:grid;align-content:end;padding:2rem;border-left:1px solid var(--line);background:rgba(0,0,0,.18)}
@@ -163,84 +88,55 @@
     .meta-row:last-child{border-bottom:0}
     .meta-row small{display:block;color:var(--gold2);font-size:.62rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
     .meta-row strong{display:block;margin-top:.25rem;font-family:Georgia,serif;font-size:1.2rem}
-
     .services-grid,.process-grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
     .services-grid{grid-template-columns:repeat(3,1fr)}
     .process-grid{grid-template-columns:repeat(4,1fr)}
     .card{min-height:250px;padding:1.7rem;background:var(--panel)}
     .card span{color:var(--gold);font-size:.67rem;letter-spacing:.13em}
     .card h3{margin:2.4rem 0 .65rem;font-size:1.8rem}
-
     .about{background:#e9dfd2;color:#111}
     .about h2{color:#111}
     .about p{color:#494138}
     .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,7vw,7rem)}
     .quote{margin-top:1.8rem;padding-left:1rem;border-left:2px solid var(--gold);font-family:Georgia,serif;font-size:1.3rem;color:#201b16}
-
-    .company-strip{
-      border-block:1px solid var(--line);
-      background:linear-gradient(135deg,#111,#17130e);
-    }
-    .company-box{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:2rem;
-      padding:2rem;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.02);
-    }
-
+    .company-strip{border-block:1px solid var(--line);background:linear-gradient(135deg,#111,#17130e)}
+    .company-box{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:2rem;border:1px solid var(--line);background:rgba(255,255,255,.02)}
     .contact{text-align:center}
     .contact p{max-width:670px;margin:0 auto 1.8rem}
     .contact-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem}
-
     footer{padding:2.2rem 0;border-top:1px solid var(--line);background:#050505}
     .footer-grid{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end}
     .footer-links{display:flex;flex-wrap:wrap;justify-content:end;gap:1rem;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
     .copyright{margin-top:.75rem;color:#8d857c;font-size:.73rem}
-
     @media(max-width:900px){
       .menu-btn{display:block}
-      .nav-links{
-        position:absolute;top:82px;left:0;right:0;display:none;
-        flex-direction:column;align-items:stretch;padding:1rem 1.2rem;
-        background:#080808;border-bottom:1px solid var(--line)
-      }
+      .nav-links{position:absolute;top:82px;left:0;right:0;display:none;flex-direction:column;align-items:stretch;padding:1rem 1.2rem;background:#080808;border-bottom:1px solid var(--line)}
       .nav-links.open{display:flex}
-      .feature-card,.about-grid,.footer-grid{grid-template-columns:1fr}
+      .feature-card,.about-grid,.footer-grid,.audio-card{grid-template-columns:1fr}
+      .audio-controls{justify-content:flex-start}
       .feature-meta{border-left:0;border-top:1px solid var(--line)}
       .services-grid{grid-template-columns:repeat(2,1fr)}
       .process-grid{grid-template-columns:repeat(2,1fr)}
       .section-head,.company-box{align-items:flex-start;flex-direction:column}
       .footer-links{justify-content:start}
     }
-
     @media(max-width:600px){
-      section{padding:5rem 0}
-      .hero h1{font-size:3.25rem}
+      section{padding:5rem 0}.hero h1{font-size:3.25rem}
       .services-grid,.process-grid{grid-template-columns:1fr}
+      .audio-progress{width:min(100%,220px)}
     }
   </style>
 </head>
-
 <body>
   <header>
     <nav class="container">
       <a class="brand" href="#top" aria-label="Delta House Productions home">
         <span class="brand-mark"><span>Δ</span></span>
-        <span class="brand-copy">
-          <strong>DELTA HOUSE</strong>
-          <span>Productions</span>
-        </span>
+        <span class="brand-copy"><strong>DELTA HOUSE</strong><span>Productions</span></span>
       </a>
-
       <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
-
       <div class="nav-links" id="navLinks">
-        <a href="#productions">Productions</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
+        <a href="#productions">Productions</a><a href="#services">Services</a><a href="#about">About</a>
         <a href="https://livinginthedelta.github.io/herrin-enterprises/#top" target="_blank" rel="noopener noreferrer">Herrin Enterprises ↗</a>
         <a class="btn btn-primary" href="#contact">Start a Project</a>
       </div>
@@ -253,10 +149,7 @@
         <div class="status">Now in production</div>
         <p class="eyebrow">Delta House Productions · Version 3</p>
         <h1>Stories from here.<br><span>Made to go anywhere.</span></h1>
-        <p class="hero-copy">
-          A Mississippi Delta production company creating documentaries, original web series,
-          commercials, photography, and media that gives local stories a bigger stage.
-        </p>
+        <p class="hero-copy">A Mississippi Delta production company creating documentaries, original web series, commercials, photography, and media that gives local stories a bigger stage.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#productions">View Productions</a>
           <a class="btn btn-secondary" href="mailto:deltahouseproductions@outlook.com">Contact the Studio</a>
@@ -264,16 +157,32 @@
       </div>
     </section>
 
+    <section class="audio-section" aria-labelledby="welcomeTitle">
+      <div class="container">
+        <div class="audio-card">
+          <div>
+            <p class="eyebrow">A message from the studio</p>
+            <h2 id="welcomeTitle">Welcome to Delta House Productions.</h2>
+            <p>Press play to hear our story, our mission, and what we hope to create from the Mississippi Delta.</p>
+          </div>
+          <div class="audio-controls">
+            <button class="btn btn-primary" id="playAudio" type="button">▶ Play Welcome</button>
+            <input class="audio-progress" id="audioProgress" type="range" min="0" max="100" value="0" aria-label="Audio progress">
+            <span class="audio-time" id="audioTime">0:00 / 0:00</span>
+            <audio id="welcomeAudio" preload="metadata">
+              <source src="audio/delta-house-productions.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="feature" id="productions">
       <div class="container">
         <div class="section-head">
-          <div>
-            <p class="eyebrow">Featured original</p>
-            <h2>Now in production.</h2>
-          </div>
+          <div><p class="eyebrow">Featured original</p><h2>Now in production.</h2></div>
           <p>Our first documentary-style series celebrates the people, businesses, places, and everyday life of the Mississippi Delta.</p>
         </div>
-
         <article class="feature-card">
           <div class="feature-copy">
             <p class="eyebrow">Delta House Original Series</p>
@@ -284,7 +193,6 @@
               <a class="btn btn-secondary" href="https://www.youtube.com/@LivingintheDelta" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
             </div>
           </div>
-
           <aside class="feature-meta">
             <div class="meta-row"><small>Format</small><strong>Documentary Web Series</strong></div>
             <div class="meta-row"><small>Region</small><strong>Mississippi Delta</strong></div>
@@ -295,113 +203,101 @@
       </div>
     </section>
 
-    <section id="services">
-      <div class="container">
-        <div class="section-head">
-          <div><p class="eyebrow">What we create</p><h2>Production services.</h2></div>
-          <p>Creative support for businesses, organizations, communities, and original entertainment projects.</p>
-        </div>
-
-        <div class="services-grid">
-          <article class="card"><span>01</span><h3>Documentaries</h3><p>Community stories, local history, personal profiles, and documentary features.</p></article>
-          <article class="card"><span>02</span><h3>Web Shows</h3><p>Original series, interviews, recurring digital content, and unscripted formats.</p></article>
-          <article class="card"><span>03</span><h3>Commercials</h3><p>Promotional videos that help local businesses explain what they do.</p></article>
-          <article class="card"><span>04</span><h3>Photography</h3><p>Production stills, brand photography, portraits, events, and promotional imagery.</p></article>
-          <article class="card"><span>05</span><h3>Social Media</h3><p>Short-form videos, announcements, campaigns, and branded storytelling.</p></article>
-          <article class="card"><span>06</span><h3>Development</h3><p>Concept development, scripting, planning, story structure, and pre-production.</p></article>
-        </div>
+    <section id="services"><div class="container">
+      <div class="section-head"><div><p class="eyebrow">What we create</p><h2>Production services.</h2></div><p>Creative support for businesses, organizations, communities, and original entertainment projects.</p></div>
+      <div class="services-grid">
+        <article class="card"><span>01</span><h3>Documentaries</h3><p>Community stories, local history, personal profiles, and documentary features.</p></article>
+        <article class="card"><span>02</span><h3>Web Shows</h3><p>Original series, interviews, recurring digital content, and unscripted formats.</p></article>
+        <article class="card"><span>03</span><h3>Commercials</h3><p>Promotional videos that help local businesses explain what they do.</p></article>
+        <article class="card"><span>04</span><h3>Photography</h3><p>Production stills, brand photography, portraits, events, and promotional imagery.</p></article>
+        <article class="card"><span>05</span><h3>Social Media</h3><p>Short-form videos, announcements, campaigns, and branded storytelling.</p></article>
+        <article class="card"><span>06</span><h3>Development</h3><p>Concept development, scripting, planning, story structure, and pre-production.</p></article>
       </div>
-    </section>
+    </div></section>
 
-    <section>
-      <div class="container">
-        <p class="eyebrow">How it works</p>
-        <h2>From idea to final cut.</h2>
-        <div class="process-grid">
-          <article class="card"><span>STEP 01</span><h3>Discover</h3><p>We learn the story, audience, goals, and purpose.</p></article>
-          <article class="card"><span>STEP 02</span><h3>Develop</h3><p>We shape the concept and organize production.</p></article>
-          <article class="card"><span>STEP 03</span><h3>Produce</h3><p>We capture the people, places, interviews, and visuals.</p></article>
-          <article class="card"><span>STEP 04</span><h3>Deliver</h3><p>We edit, polish, and prepare the finished project.</p></article>
-        </div>
+    <section><div class="container">
+      <p class="eyebrow">How it works</p><h2>From idea to final cut.</h2>
+      <div class="process-grid">
+        <article class="card"><span>STEP 01</span><h3>Discover</h3><p>We learn the story, audience, goals, and purpose.</p></article>
+        <article class="card"><span>STEP 02</span><h3>Develop</h3><p>We shape the concept and organize production.</p></article>
+        <article class="card"><span>STEP 03</span><h3>Produce</h3><p>We capture the people, places, interviews, and visuals.</p></article>
+        <article class="card"><span>STEP 04</span><h3>Deliver</h3><p>We edit, polish, and prepare the finished project.</p></article>
       </div>
-    </section>
+    </div></section>
 
-    <section class="about" id="about">
-      <div class="container about-grid">
-        <div>
-          <p class="eyebrow">About the studio</p>
-          <h2>Created in the Delta. Built for bigger stories.</h2>
-        </div>
-        <div>
-          <p>Delta House Productions is a creative production company based in the Mississippi Delta. We develop original media and help local people, businesses, and communities tell their stories professionally.</p>
-          <p>Delta House Productions is part of Herrin Enterprises and works alongside Living in the Delta and Herrin Photography while maintaining its own production identity.</p>
-          <div class="quote">“The Delta is full of stories. Our job is to help the world see them.”</div>
-        </div>
+    <section class="about" id="about"><div class="container about-grid">
+      <div><p class="eyebrow">About the studio</p><h2>Created in the Delta. Built for bigger stories.</h2></div>
+      <div>
+        <p>Delta House Productions is a creative production company based in the Mississippi Delta. We develop original media and help local people, businesses, and communities tell their stories professionally.</p>
+        <p>Delta House Productions is part of Herrin Enterprises and works alongside Living in the Delta and Herrin Photography while maintaining its own production identity.</p>
+        <div class="quote">“The Delta is full of stories. Our job is to help the world see them.”</div>
       </div>
-    </section>
+    </div></section>
 
-    <section class="company-strip">
-      <div class="container">
-        <div class="company-box">
-          <div>
-            <p class="eyebrow">Our parent company</p>
-            <h3 style="font-size:2.4rem;margin-bottom:.5rem">A Herrin Enterprises company.</h3>
-            <p style="margin:0">Explore the growing family of brands behind Delta House Productions.</p>
-          </div>
-          <a class="btn btn-primary" href="https://livinginthedelta.github.io/herrin-enterprises/#top" target="_blank" rel="noopener noreferrer">Visit Herrin Enterprises ↗</a>
-        </div>
-      </div>
-    </section>
+    <section class="company-strip"><div class="container"><div class="company-box">
+      <div><p class="eyebrow">Our parent company</p><h3 style="font-size:2.4rem;margin-bottom:.5rem">A Herrin Enterprises company.</h3><p style="margin:0">Explore the growing family of brands behind Delta House Productions.</p></div>
+      <a class="btn btn-primary" href="https://livinginthedelta.github.io/herrin-enterprises/#top" target="_blank" rel="noopener noreferrer">Visit Herrin Enterprises ↗</a>
+    </div></div></section>
 
-    <section class="contact" id="contact">
-      <div class="container">
-        <p class="eyebrow">Start a production</p>
-        <h2>Have a story worth filming?</h2>
-        <p>Reach out about documentaries, web shows, commercials, partnerships, community features, or original production ideas.</p>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:deltahouseproductions@outlook.com">Email the Studio</a>
-          <a class="btn btn-secondary" href="https://livinginthedelta.github.io/herrin-enterprises/#top" target="_blank" rel="noopener noreferrer">Herrin Enterprises ↗</a>
-        </div>
+    <section class="contact" id="contact"><div class="container">
+      <p class="eyebrow">Start a production</p><h2>Have a story worth filming?</h2>
+      <p>Reach out about documentaries, web shows, commercials, partnerships, community features, or original production ideas.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:deltahouseproductions@outlook.com">Email the Studio</a>
+        <a class="btn btn-secondary" href="https://livinginthedelta.github.io/herrin-enterprises/#top" target="_blank" rel="noopener noreferrer">Herrin Enterprises ↗</a>
       </div>
-    </section>
+    </div></section>
   </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <a class="brand" href="#top">
-          <span class="brand-mark"><span>Δ</span></span>
-          <span class="brand-copy"><strong>DELTA HOUSE</strong><span>Productions</span></span>
-        </a>
-        <div class="copyright">© <span id="year"></span> Delta House Productions. A Herrin Enterprises company.</div>
-      </div>
-
-      <div class="footer-links">
-        <a href="mailto:deltahouseproductions@outlook.com">Email</a>
-        <a href="https://livinginthedelta.github.io/living-in-the-delta/#top" target="_blank" rel="noopener noreferrer">Living in the Delta ↗</a>
-        <a href="https://livinginthedelta.github.io/herrin-enterprises/#top" target="_blank" rel="noopener noreferrer">Herrin Enterprises ↗</a>
-      </div>
+  <footer><div class="container footer-grid">
+    <div><a class="brand" href="#top"><span class="brand-mark"><span>Δ</span></span><span class="brand-copy"><strong>DELTA HOUSE</strong><span>Productions</span></span></a>
+    <div class="copyright">© <span id="year"></span> Delta House Productions. A Herrin Enterprises company.</div></div>
+    <div class="footer-links">
+      <a href="mailto:deltahouseproductions@outlook.com">Email</a>
+      <a href="https://livinginthedelta.github.io/living-in-the-delta/#top" target="_blank" rel="noopener noreferrer">Living in the Delta ↗</a>
+      <a href="https://livinginthedelta.github.io/herrin-enterprises/#top" target="_blank" rel="noopener noreferrer">Herrin Enterprises ↗</a>
     </div>
-  </footer>
+  </div></footer>
 
   <script>
     const menuBtn = document.getElementById("menuBtn");
     const navLinks = document.getElementById("navLinks");
-
     menuBtn.addEventListener("click", () => {
       const open = navLinks.classList.toggle("open");
       menuBtn.textContent = open ? "✕" : "☰";
       menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
     });
+    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      navLinks.classList.remove("open"); menuBtn.textContent = "☰"; menuBtn.setAttribute("aria-expanded","false");
+    }));
 
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuBtn.textContent = "☰";
-        menuBtn.setAttribute("aria-expanded", "false");
-      });
+    const audio = document.getElementById("welcomeAudio");
+    const playBtn = document.getElementById("playAudio");
+    const progress = document.getElementById("audioProgress");
+    const time = document.getElementById("audioTime");
+    const formatTime = seconds => {
+      if (!Number.isFinite(seconds)) return "0:00";
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60).toString().padStart(2,"0");
+      return `${mins}:${secs}`;
+    };
+    audio.addEventListener("loadedmetadata", () => time.textContent = `0:00 / ${formatTime(audio.duration)}`);
+    playBtn.addEventListener("click", async () => {
+      try {
+        if (audio.paused) { await audio.play(); playBtn.textContent = "⏸ Pause Welcome"; }
+        else { audio.pause(); playBtn.textContent = "▶ Play Welcome"; }
+      } catch (error) {
+        playBtn.textContent = "Audio unavailable";
+      }
     });
-
+    audio.addEventListener("timeupdate", () => {
+      progress.value = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+      time.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+    });
+    progress.addEventListener("input", () => {
+      if (audio.duration) audio.currentTime = (progress.value / 100) * audio.duration;
+    });
+    audio.addEventListener("ended", () => { playBtn.textContent = "▶ Play Welcome"; progress.value = 0; });
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
